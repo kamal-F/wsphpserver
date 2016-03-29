@@ -31,3 +31,10 @@ get, 1 parameter
 ```
 curl -i -H "Accept:application/json" -H "Content-Type:application/json" -XGET "http://localhost/latihan/wsphpserver/api.php/?action=get_app_list"
 ```
+Daftar Nama Kelompok 4
+Agung Permana			1144035
+Nurila Faradila Irfan	1144121
+Putri Suciani Hafid		1144061
+Desi Febrianti			1144005
+Ihsan Noor Fauzanie R	1144009
+Billy Ramayuda			1144053
