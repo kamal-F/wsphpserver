@@ -1,6 +1,14 @@
 # wsphpserver
 webservice konsep, menggunakan apache, php5, hanya response json
-
+Kelompok 2 D4TI Web Service
+```
+Eva Nur Fauziyah (1144084)
+Dzikri Ahmad Ghifari (1144077)
+Adinto Prasetyo (1144018)
+Shilviana Thita Sipahelut (1144112)
+Rizki Fadillah (1144089)
+Mochamad uki Satriana (1144059)
+```
 Cara Pakai
 ----------
 
