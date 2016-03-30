@@ -31,3 +31,22 @@ get, 1 parameter
 ```
 curl -i -H "Accept:application/json" -H "Content-Type:application/json" -XGET "http://localhost/latihan/wsphpserver/api.php/?action=get_app_list"
 ```
+------------------
+------------------
+Kelompok 2 WebService
+
+Nama : Suriadi Zainuddin
+NPM  : 1144092
+Nama : Aldy Muldany
+NPM  : 1144123
+Nama : Chandra Ahmad Rizky
+NPM  : 1144049
+Nama : Yanda Rizky Prazetya
+NPM  : 1144004
+Nama : Muhammad Akbar Tamrin
+NPM  : 1144012
+Nama : Fauzan dzulfaqar
+NPM  : 1144091
+
+------------------
+------------------
