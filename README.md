@@ -1,6 +1,31 @@
 # wsphpserver
 webservice konsep, menggunakan apache, php5, hanya response json
 
+--------------------------
+--------------------------
+
+Kelompok 2 WEB SERVICE .
+
+Nama : Aldy Muldani 
+NPM : 1144123
+
+Nama : Suriadi Zainuddin
+NPM : 1144092
+
+Nama : Chandra Ahmad Rizki
+NPM : 1144049
+
+Nama : Yanda Rizky Prasetiya
+NPM : 1144004
+
+Nama : M Akbar Thamrin
+NPM : 1144012
+
+Nama : Faudzan Dzulfaqor
+NPM : 1144
+--------------------------
+--------------------------
+
 Cara Pakai
 ----------
 
