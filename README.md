@@ -31,3 +31,14 @@ get, 1 parameter
 ```
 curl -i -H "Accept:application/json" -H "Content-Type:application/json" -XGET "http://localhost/latihan/wsphpserver/api.php/?action=get_app_list"
 ```
+
+Nama Kelompok | NPM | User GitHub
+
+
+Indah Marini Rizky Sihombing | 1144041 | IndahMarini
+
+Nadia Ayu Lestari Arifin | 1144002 | nadiaaaAR
+
+Rima Rizky Lestari | 1144118 | rimarizkyy
+
+Tentri May Simbolon | 1144027 | tentrisimbolon
