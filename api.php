@@ -38,14 +38,6 @@ function get_app_by_id($id)
 }
 */
 
-function get_umur()
-{
-  //normally this info would be pulled from a database.
-  //build JSON array
-  $get_umur = array(array("Nama" => 20, "NPM" => "1144108", "Agama" => "Islam", "Umur" => 20)); 
-	
-  return $get_umur;
-}
 
 function get_status($get_status)
 {
