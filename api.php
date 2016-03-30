@@ -11,10 +11,10 @@ function get_app_by_id($id)
   // build JSON array.
   switch ($id){
     case 1:
-      $app_info = array("app_name" => "Web Demo", "app_price" => "Free", "app_version" => "2.0"); 
+      $app_info = array("Nama Barang" => "Web Demo", "app_price" => "Free", "app_version" => "2.0"); 
       break;
     case 2:
-      $app_info = array("app_name" => "Audio Countdown", "app_price" => "Free", "app_version" => "1.1");
+      $app_info = array( "Nama Barang" => "jjj", "Nama Vendor" => "ll", "Qty" => "190","Harga Satuan" => "1000");
       break;
     case 3:
       $app_info = array("app_name" => "The Tab Key", "app_price" => "Free", "app_version" => "1.2");
