@@ -36,7 +36,17 @@ function get_app_list()
   return $app_list;
 }
 
-$possible_url = array("get_app_list", "get_app");
+function setInfo($setInfo)
+{
+  if (2016 - $setInfo > 20){
+    $setInfo = "Umur Anda Mencukupi";
+  }else{
+    $setInfo="Umur Anda Tidak Mencukupi";
+  }
+  return $setInfo;
+}
+
+$possible_url = array("get_app_list", "get_app", "setInfo");
 
 $value = "An error has occurred";
 
@@ -53,29 +63,35 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
         else
           $value = "Missing argument";
         break;
+       case "setInfo":
+        if (isset($_GET["setInfo"]))
+          $value = setInfo($_GET["setInfo"]);
+        else
+          $value = "Missing argument";
+        break;
     }
 }
 
 // kamal
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-	$json = file_get_contents('php://input');
-	$obj = json_decode($json);
-	$value =  "berhasil diinput ". $obj->{'nama'};
+  $json = file_get_contents('php://input');
+  $obj = json_decode($json);
+  $value =  "berhasil diinput ". $obj->{'nama'};
 }
 
 if($_SERVER['REQUEST_METHOD'] == "PUT"){
-	$json = file_get_contents('php://input');
-	$obj = json_decode($json);	
-	$id= $_SERVER['HTTP_ID'];
-	
-	$value = "berhasil diupdate ".$id." ".$obj->{'nama'};
+  $json = file_get_contents('php://input');
+  $obj = json_decode($json);  
+  $id= $_SERVER['HTTP_ID'];
+  
+  $value = "berhasil diupdate ".$id." ".$obj->{'nama'};
 }
 
 if($_SERVER['REQUEST_METHOD'] == "DELETE"){
-	$id= $_SERVER['HTTP_ID'];	
-	$value = "dihapus ". $id;
-	
+  $id= $_SERVER['HTTP_ID']; 
+  $value = "dihapus ". $id;
+  
 }
 
 header('Content-type: application/json');
