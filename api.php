@@ -59,6 +59,9 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
 // kamal
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
+	// TODO: gunakan authentication 
+	//curl -i  -H "Accept:application/json" -H "Content-Type:application/json" -XPOST "http://localhost/latihan/wsphpserver/api.php/" -d '{"kode": "x2", "nama": "termos","deskripsi":"barang bagus","id_kantor":"10"}'
+	//$au = $_SERVER['PHP_AUTH_USER'];
 	$json = file_get_contents('php://input');
 	$obj = json_decode($json);
 	$value =  "berhasil diinput ". $obj->{'nama'};
