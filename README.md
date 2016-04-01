@@ -31,3 +31,10 @@ get, 1 parameter
 ```
 curl -i -H "Accept:application/json" -H "Content-Type:application/json" -XGET "http://localhost/latihan/wsphpserver/api.php/?action=get_app_list"
 ```
+Kelompok 1
+nama|npm
+Fitriani M 1144001
+Riza Fahlepi 1144042
+Safif Rafi Efendi 1144106
+I Syarif Awaluddin 1144095
+Daniel Panjaitan 1144085
