@@ -31,3 +31,12 @@ get, 1 parameter
 ```
 curl -i -H "Accept:application/json" -H "Content-Type:application/json" -XGET "http://localhost/latihan/wsphpserver/api.php/?action=get_app_list"
 ```
+Kelompok : 3 
+Nama : Andi Rahmat Hidayat (1144102)
+       Anggi Sholihatus Sadiah (1144016)
+       Diana Asri Wijayanti (1144088)
+       Herlin Restusari (1144008)
+       Muhammad Firman Kahfi (1144015)
+       Septian Firmansyah (1144071)
+
+D4 TI 2B ANGKATAN 2014
