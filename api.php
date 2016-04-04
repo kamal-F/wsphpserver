@@ -14,7 +14,7 @@ function get_app_by_id($id)
       $app_info = array("Nama Barang" => "Web Demo", "app_price" => "Free", "app_version" => "2.0"); 
       break;
     case 2:
-      $app_info = array( "Nama Barang" => "Kayu Jati", "Nama Vendor" => "PT Diammod Utama", "Qty" => "2","Harga Satuan" => "1.000.000");
+      $app_info = array( "Nama Barang" => "Kayu Jati", "Nama Vendor" => "PT Diamond Utama", "Qty" => "2","Harga Satuan" => "1.000.000");
       break;
     case 3:
       $app_info = array("app_name" => "The Tab Key", "app_price" => "Free", "app_version" => "1.2");
