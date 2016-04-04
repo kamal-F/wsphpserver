@@ -10,17 +10,17 @@ function get_app_by_id($id)
   // normally this info would be pulled from a database.
   // build JSON array.
   switch ($id){
-    case 1:
-      $app_info = array("app_name" => "Web Demo", "app_price" => "Free", "app_version" => "2.0"); 
+  case 1:
+      $app_info = array("Nama Barang" => "Web Demo", "app_price" => "Free", "app_version" => "2.0"); 
       break;
     case 2:
-      $app_info = array("app_name" => "Audio Countdown", "app_price" => "Free", "app_version" => "1.1");
+      $app_info = array( "Nama Barang" => "Sepatu", "Nama Vendor" => "Cantik", "Qty" => "100","Harga Satuan" => "1000000");
       break;
     case 3:
-      $app_info = array("app_name" => "The Tab Key", "app_price" => "Free", "app_version" => "1.2");
+      $app_info = array("Nama Barang" => "Tas", "Nama Vendor" => "Bagus", "Qty" => "170","Harga Satuan" => "1500000");
       break;
     case 4:
-      $app_info = array("app_name" => "Music Sleep Timer", "app_price" => "Free", "app_version" => "1.9");
+      $app_info = array("Nama Barang" => "Dress", "Nama Vendor" => "Sally", "Qty" => "150","Harga Satuan" => "1000000");
       break;
   }
 
