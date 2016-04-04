@@ -36,7 +36,17 @@ function get_app_list()
   return $app_list;
 }
 
-$possible_url = array("get_app_list", "get_app");
+function setInfo($setInfo)
+{
+	if (2016 - $setInfo > 19){
+		$setInfo = "Umur Anda Mencukupi";
+	}else{
+		$setInfo = "tunggu " . (20 - (2016 - $setInfo)) . " tahun lagi";
+	}
+	return $setInfo;
+}	
+
+$possible_url = array("get_app_list", "get_app", "setInfo");
 
 $value = "An error has occurred";
 
@@ -53,15 +63,18 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
         else
           $value = "Missing argument";
         break;
+    case "setInfo":
+    	if (isset($_GET["setInfo"]))
+    	 $value = setInfo($_GET["setInfo"]);
+    	  else
+          $value = "Missing argument";
+        break;
     }
 }
 
 // kamal
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-	// TODO: gunakan authentication 
-	//curl -i  -H "Accept:application/json" -H "Content-Type:application/json" -XPOST "http://localhost/latihan/wsphpserver/api.php/" -d '{"kode": "x2", "nama": "termos","deskripsi":"barang bagus","id_kantor":"10"}'
-	//$au = $_SERVER['PHP_AUTH_USER'];
 	$json = file_get_contents('php://input');
 	$obj = json_decode($json);
 	$value =  "berhasil diinput ". $obj->{'nama'};
@@ -80,7 +93,7 @@ if($_SERVER['REQUEST_METHOD'] == "DELETE"){
 	$value = "dihapus ". $id;
 	
 }
-
+ 
 header('Content-type: application/json');
 //return JSON array
 exit(json_encode($value));
