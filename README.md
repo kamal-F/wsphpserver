@@ -31,3 +31,11 @@ get, 1 parameter
 ```
 curl -i -H "Accept:application/json" -H "Content-Type:application/json" -XGET "http://localhost/latihan/wsphpserver/api.php/?action=get_app_list"
 ```
+
+Kelompok 3 (D4 TI 2A)
+Syarah Fauziatul Ulya 		(1144075)
+Faizal Mutakin 			(1144078)
+Khaera Tunnisa 			(1144044)
+Gamma Muhammad Najmuddin 	(1144068)
+Septian Cahya Diningrat 	(1144007)
+Hasna Khalidah 			(1144116)
