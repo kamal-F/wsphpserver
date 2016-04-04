@@ -27,6 +27,30 @@ function get_app_by_id($id)
   return $app_info;
 }
 
+function getBarang($id)
+{
+  $app_info = array();
+
+  // normally this info would be pulled from a database.
+  // build JSON array.
+  switch ($id){
+  case 1:
+      $app_info = array("Nama Barang" => "Web Demo", "app_price" => "Free", "app_version" => "2.0"); 
+      break;
+    case 2:
+      $app_info = array( "Nama Barang" => "Sepatu", "Nama Vendor" => "Cantik", "Qty" => "100","Harga Satuan" => "1000000");
+      break;
+    case 3:
+      $app_info = array("Nama Barang" => "Tas", "Nama Vendor" => "Bagus", "Qty" => "170","Harga Satuan" => "1500000");
+      break;
+    case 4:
+      $app_info = array("Nama Barang" => "Dress", "Nama Vendor" => "Sally", "Qty" => "150","Harga Satuan" => "1000000");
+      break;
+  }
+
+  return $app_info;
+}
+
 function get_app_list()
 {
   //normally this info would be pulled from a database.
@@ -36,7 +60,7 @@ function get_app_list()
   return $app_list;
 }
 
-$possible_url = array("get_app_list", "get_app");
+$possible_url = array("get_app_list", "get_app", "getBarang");
 
 $value = "An error has occurred";
 
@@ -53,15 +77,18 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
         else
           $value = "Missing argument";
         break;
+       case "getBarang":
+        if (isset($_GET["id"]))
+          $value = getBarang($_GET["id"]);
+        else
+          $value = "Missing argument";
+        break;
     }
 }
 
 // kamal
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-	// TODO: gunakan authentication 
-	//curl -i  -H "Accept:application/json" -H "Content-Type:application/json" -XPOST "http://localhost/latihan/wsphpserver/api.php/" -d '{"kode": "x2", "nama": "termos","deskripsi":"barang bagus","id_kantor":"10"}'
-	//$au = $_SERVER['PHP_AUTH_USER'];
 	$json = file_get_contents('php://input');
 	$obj = json_decode($json);
 	$value =  "berhasil diinput ". $obj->{'nama'};
