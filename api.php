@@ -93,7 +93,7 @@ if($_SERVER['REQUEST_METHOD'] == "DELETE"){
 	$value = "dihapus ". $id;
 	
 }
-
+ 
 header('Content-type: application/json');
 //return JSON array
 exit(json_encode($value));
