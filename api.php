@@ -10,6 +10,30 @@ function get_app_by_id($id)
   // normally this info would be pulled from a database.
   // build JSON array.
   switch ($id){
+    case 1:
+      $app_info = array("app_name" => "Web Demo", "app_price" => "Free", "app_version" => "2.0"); 
+      break;
+    case 2:
+      $app_info = array("app_name" => "Audio Countdown", "app_price" => "Free", "app_version" => "1.1");
+      break;
+    case 3:
+      $app_info = array("app_name" => "The Tab Key", "app_price" => "Free", "app_version" => "1.2");
+      break;
+    case 4:
+      $app_info = array("app_name" => "Music Sleep Timer", "app_price" => "Free", "app_version" => "1.9");
+      break;
+  }
+
+  return $app_info;
+}
+
+function getBarang($id)
+{
+  $app_info = array();
+
+  // normally this info would be pulled from a database.
+  // build JSON array.
+  switch ($id){
   case 1:
       $app_info = array("Nama Barang" => "Web Demo", "app_price" => "Free", "app_version" => "2.0"); 
       break;
@@ -36,7 +60,7 @@ function get_app_list()
   return $app_list;
 }
 
-$possible_url = array("get_app_list", "get_app");
+$possible_url = array("get_app_list", "get_app", "getBarang");
 
 $value = "An error has occurred";
 
@@ -50,6 +74,12 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
       case "get_app":
         if (isset($_GET["id"]))
           $value = get_app_by_id($_GET["id"]);
+        else
+          $value = "Missing argument";
+        break;
+       case "getBarang":
+        if (isset($_GET["id"]))
+          $value = getBarang($_GET["id"]);
         else
           $value = "Missing argument";
         break;
