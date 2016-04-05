@@ -36,7 +36,17 @@ function get_app_list()
   return $app_list;
 }
 
-$possible_url = array("get_app_list", "get_app");
+function setInfo($setInfo)
+{
+	if (2016 - $setInfo > 20){
+		$setInfo = "Umur Anda Mencukupi";
+	}else{
+		$setInfo="Umur Anda Tidak Mencukupi";
+	}
+	return $setInfo;
+}
+
+$possible_url = array("get_app_list", "get_app", "setInfo");
 
 $value = "An error has occurred";
 
@@ -50,6 +60,12 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
       case "get_app":
         if (isset($_GET["id"]))
           $value = get_app_by_id($_GET["id"]);
+        else
+          $value = "Missing argument";
+        break;
+       case "setInfo":
+        if (isset($_GET["setInfo"]))
+          $value = setInfo($_GET["setInfo"]);
         else
           $value = "Missing argument";
         break;
