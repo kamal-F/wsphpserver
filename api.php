@@ -27,6 +27,36 @@ function get_app_by_id($id)
   return $app_info;
 }
 
+
+/*function get_umur()
+{
+  //normally this info would be pulled from a database.
+  //build JSON array
+  $umur = array(array("umur" => 20, "name" => "Agung"), array("umur" => 10, "name" => "Audio Countdown")); 
+
+  return $umur;
+}
+*/
+
+
+function get_status($get_status)
+{
+  //normally this info would be pulled from a database.
+  //build JSON array
+  //$get_umur = array(array("Nama" => 20, "NPM" => "1144108", "Agama" => "Islam", "Umur" => 20)); 
+	
+  //return $get_umur;
+  
+  if (2016 - $get_status > 20){
+		$get_status = "cukup";
+  }else{
+		$get_status="tidak";
+ //
+			}
+			
+			return $get_status;
+}
+
 function get_app_list()
 {
   //normally this info would be pulled from a database.
@@ -36,7 +66,7 @@ function get_app_list()
   return $app_list;
 }
 
-$possible_url = array("get_app_list", "get_app");
+$possible_url = array("get_app_list", "get_app", "get_umur", "get_status");
 
 $value = "An error has occurred";
 
@@ -46,6 +76,13 @@ if (isset($_GET["action"]) && in_array($_GET["action"], $possible_url))
     {
       case "get_app_list":
         $value = get_app_list();
+        break;
+	  case "get_umur":
+        $value = get_umur();
+        break;
+	case "get_status":
+        if (isset($_GET["get_status"]))
+          $value = get_status($_GET["get_status"]);
         break;
       case "get_app":
         if (isset($_GET["id"]))
