@@ -1,5 +1,14 @@
 # wsphpserver
 webservice konsep, menggunakan apache, php5, hanya response json
+## Kelompok 3
+Nama | Npm
+------------|--------
+ADY WIRANATHA SAMSAN | 1144013
+HARRY SYASKA PERDANA | 1144026
+KANIA KUSTIANI | 1144039
+KETUT ADI WIJANARKO | 1144031
+MUHAMMAD RAMADHAN T | 1144045
+
 
 Cara Pakai
 ----------
