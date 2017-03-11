@@ -1,6 +1,17 @@
 # wsphpserver
 webservice konsep, menggunakan apache, php5, hanya response json
 
+## KELOMPOK 2 ##
+
+Nama | NPM 
+----------|----------
+Ayu Anggara | 1144014
+Nava Gia Ginasta | 1144096
+Yogi Nugraha | 1144076
+Faisal Akbar Ramadhan | 1144010
+Alfi Zulfian Abdi | 1144024
+Bayu Rizki | 1144101
+
 Cara Pakai
 ----------
 
